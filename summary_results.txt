@@ -1,30 +1,44 @@
-IMU Sensor Data Filtering & Visualization - Summary Results
-============================================================
+IMU Sensor Data Filtering & Visualization - Final Summary
+=================================================================
 
 Input file: imu_data.csv
 Output file: filtered_output.csv
 Moving average window size: 5
 EMA alpha: 0.25
+Butterworth order: 2
+Butterworth cutoff frequency: 2.0 Hz
+Sampling rate: 100.0 Hz
 
 acc_x Standard Deviation Comparison
-----------------------------------------
+---------------------------------------------
 Raw acc_x std           : 0.153662
 Moving Average acc_x std: 0.150296
 EMA acc_x std           : 0.143776
+Butterworth acc_x std   : 0.138337
 
 Estimated Noise Reduction
-----------------------------------------
+---------------------------------------------
 Moving Average: 2.19%
 EMA           : 6.43%
+Butterworth   : 9.97%
+
+Dominant Frequency Comparison (acc_x)
+---------------------------------------------
+Raw         : 3.3333 Hz
+Moving Avg  : 3.3333 Hz
+EMA         : 3.3333 Hz
+Butterworth : 3.3333 Hz
 
 Accelerometer Magnitude Statistics
-----------------------------------------
-Raw magnitude mean : 1.076034
-MA magnitude mean  : 1.075812
-EMA magnitude mean : 1.059325
+---------------------------------------------
+Raw magnitude mean        : 1.076034
+Moving Average mean       : 1.075812
+EMA mean                  : 1.059325
+Butterworth mean          : 1.074209
 
 Gyroscope Magnitude Statistics
-----------------------------------------
-Raw magnitude mean : 1.540104
-MA magnitude mean  : 1.531315
-EMA magnitude mean : 1.356540
+---------------------------------------------
+Raw magnitude mean        : 1.540104
+Moving Average mean       : 1.531315
+EMA mean                  : 1.356540
+Butterworth mean          : 1.511492
