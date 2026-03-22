@@ -1,0 +1,30 @@
+IMU Sensor Data Filtering & Visualization - Summary Results
+============================================================
+
+Input file: imu_data.csv
+Output file: filtered_output.csv
+Moving average window size: 5
+EMA alpha: 0.25
+
+acc_x Standard Deviation Comparison
+----------------------------------------
+Raw acc_x std           : 0.153662
+Moving Average acc_x std: 0.150296
+EMA acc_x std           : 0.143776
+
+Estimated Noise Reduction
+----------------------------------------
+Moving Average: 2.19%
+EMA           : 6.43%
+
+Accelerometer Magnitude Statistics
+----------------------------------------
+Raw magnitude mean : 1.076034
+MA magnitude mean  : 1.075812
+EMA magnitude mean : 1.059325
+
+Gyroscope Magnitude Statistics
+----------------------------------------
+Raw magnitude mean : 1.540104
+MA magnitude mean  : 1.531315
+EMA magnitude mean : 1.356540
