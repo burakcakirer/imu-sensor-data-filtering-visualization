@@ -1,3 +1,17 @@
+## Signal Filtering Example
+![acc_x plot](signal_plot_acc_x.png)
+
+## Magnitude Comparison
+![magnitude plot](signal_plot_magnitude.png)
+
+## Filter Performance
+![filter comparison](filter_comparison.png)
+
+## FFT Comparison
+![fft comparison](fft_comparison.png)
+
+
+
 # IMU Sensor Data Filtering & Visualization
 
 This project implements a Python-based IMU signal processing pipeline for accelerometer and gyroscope data. It applies multiple filtering methods, evaluates noise reduction performance, computes sensor magnitude metrics, and compares frequency-domain behavior using FFT analysis.
