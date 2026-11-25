@@ -1,8 +1,8 @@
 IMU Sensor Data Filtering & Visualization - Final Summary
 =================================================================
 
-Input file: imu_data.csv
-Output file: filtered_output.csv
+Input file: data/imu_data.csv
+Output file: results/filtered_output.csv
 Moving average window size: 5
 EMA alpha: 0.25
 Butterworth order: 2

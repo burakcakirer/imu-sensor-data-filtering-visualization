@@ -1,21 +1,34 @@
+from pathlib import Path
+
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import butter, filtfilt
+
+BASE_DIR = Path(__file__).resolve().parent
+DATA_DIR = BASE_DIR / "data"
+RESULTS_DIR = BASE_DIR / "results"
+RESULTS_DIR.mkdir(exist_ok=True)
+
+
+def rel(path):
+    """Repository-relative path for printing and reports."""
+    return path.relative_to(BASE_DIR).as_posix()
+
 
 # ============================================
 # IMU SENSOR DATA FILTERING & VISUALIZATION
 # Final Professional Version
 # ============================================
 
-INPUT_FILE = "imu_data.csv"
-OUTPUT_FILE = "filtered_output.csv"
-SUMMARY_FILE = "summary_results.txt"
+INPUT_FILE = DATA_DIR / "imu_data.csv"
+OUTPUT_FILE = RESULTS_DIR / "filtered_output.csv"
+SUMMARY_FILE = RESULTS_DIR / "summary_results.txt"
 
-PLOT_ACC_X = "signal_plot_acc_x.png"
-PLOT_MAG = "signal_plot_magnitude.png"
-PLOT_COMPARISON = "filter_comparison.png"
-PLOT_FFT = "fft_comparison.png"
+PLOT_ACC_X = RESULTS_DIR / "signal_plot_acc_x.png"
+PLOT_MAG = RESULTS_DIR / "signal_plot_magnitude.png"
+PLOT_COMPARISON = RESULTS_DIR / "filter_comparison.png"
+PLOT_FFT = RESULTS_DIR / "fft_comparison.png"
 
 WINDOW_SIZE = 5
 EMA_ALPHA = 0.25
@@ -167,8 +180,8 @@ def main():
     with open(SUMMARY_FILE, "w", encoding="utf-8") as f:
         f.write("IMU Sensor Data Filtering & Visualization - Final Summary\n")
         f.write("=" * 65 + "\n\n")
-        f.write(f"Input file: {INPUT_FILE}\n")
-        f.write(f"Output file: {OUTPUT_FILE}\n")
+        f.write(f"Input file: {rel(INPUT_FILE)}\n")
+        f.write(f"Output file: {rel(OUTPUT_FILE)}\n")
         f.write(f"Moving average window size: {WINDOW_SIZE}\n")
         f.write(f"EMA alpha: {EMA_ALPHA}\n")
         f.write(f"Butterworth order: {BUTTER_ORDER}\n")
@@ -222,12 +235,12 @@ def main():
     print(f"Butterworth noise reduction  : {butter_noise_reduction:.2f}%")
     print()
     print("Files generated successfully:")
-    print(f"- {OUTPUT_FILE}")
-    print(f"- {SUMMARY_FILE}")
-    print(f"- {PLOT_ACC_X}")
-    print(f"- {PLOT_MAG}")
-    print(f"- {PLOT_COMPARISON}")
-    print(f"- {PLOT_FFT}")
+    print(f"- {rel(OUTPUT_FILE)}")
+    print(f"- {rel(SUMMARY_FILE)}")
+    print(f"- {rel(PLOT_ACC_X)}")
+    print(f"- {rel(PLOT_MAG)}")
+    print(f"- {rel(PLOT_COMPARISON)}")
+    print(f"- {rel(PLOT_FFT)}")
 
 
 if __name__ == "__main__":

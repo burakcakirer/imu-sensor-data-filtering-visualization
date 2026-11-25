@@ -1,14 +1,14 @@
 ## Signal Filtering Example
-![acc_x plot](signal_plot_acc_x.png)
+![acc_x plot](results/signal_plot_acc_x.png)
 
 ## Magnitude Comparison
-![magnitude plot](signal_plot_magnitude.png)
+![magnitude plot](results/signal_plot_magnitude.png)
 
 ## Filter Performance
-![filter comparison](filter_comparison.png)
+![filter comparison](results/filter_comparison.png)
 
 ## FFT Comparison
-![fft comparison](fft_comparison.png)
+![fft comparison](results/fft_comparison.png)
 
 
 
@@ -37,13 +37,13 @@ This project implements a Python-based IMU signal processing pipeline for accele
 
 ## Project Files
 - `main.py` → signal processing and visualization script
-- `imu_data.csv` → raw IMU dataset
-- `filtered_output.csv` → processed output dataset
-- `summary_results.txt` → numerical summary report
-- `signal_plot_acc_x.png` → raw vs filtered acc_x signals
-- `signal_plot_magnitude.png` → accelerometer magnitude comparison
-- `filter_comparison.png` → standard deviation comparison of filters
-- `fft_comparison.png` → frequency-domain comparison using FFT
+- `data/imu_data.csv` → raw IMU dataset
+- `results/filtered_output.csv` → processed output dataset
+- `results/summary_results.txt` → numerical summary report
+- `results/signal_plot_acc_x.png` → raw vs filtered acc_x signals
+- `results/signal_plot_magnitude.png` → accelerometer magnitude comparison
+- `results/filter_comparison.png` → standard deviation comparison of filters
+- `results/fft_comparison.png` → frequency-domain comparison using FFT
 - `requirements.txt` → project dependencies
 - `README.md` → documentation
 
@@ -73,8 +73,10 @@ The script:
 ## How to Run
 ```bash
 python main.py
+```
 
+Outputs are written to `results/`.
 
-Author
+## Author
 
 Burak Bekir ÇAKIRER
